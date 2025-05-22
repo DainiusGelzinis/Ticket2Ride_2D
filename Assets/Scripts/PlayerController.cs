@@ -14,11 +14,15 @@ public class PlayerController : MonoBehaviour
     private float wallJumpTimer;
 
     private float horizontalInput;
+    private int facingDir = 1;
+
+    private Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -27,10 +31,13 @@ public class PlayerController : MonoBehaviour
 
         // Flip player sprite based on move 
         if (horizontalInput > 0.01f)
-            transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            facingDir = 1;
         else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-0.5f, 0.5f, 1);
+            facingDir = -1;
 
+        transform.localScale = new Vector3(0.5f * facingDir, 0.5f, 1);
+
+        UpdateAnimator();
         
         if (wallJumpTimer > 0)
             wallJumpTimer -= Time.deltaTime;
@@ -92,5 +99,18 @@ public class PlayerController : MonoBehaviour
         Vector2 direction = new Vector2(transform.localScale.x, 0);
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size * 0.9f, 0f, direction, 0.1f, wallLayer);
         return hit.collider != null;
+    }
+
+    private void UpdateAnimator()
+    {
+        if (animator == null) return;
+
+        animator.SetFloat("InputY", rb.linearVelocity.y);
+
+        bool isWalking = Mathf.Abs(horizontalInput) > 0.01f && IsGrounded();
+        animator.SetBool("isWalking", isWalking);
+
+        bool isJumping = !IsGrounded();
+        //animator.SetBool("isJumping", isJumping);
     }
 }
