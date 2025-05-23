@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         else if (horizontalInput < -0.01f)
             facingDir = -1;
 
-        transform.localScale = new Vector3(0.5f * facingDir, 0.5f, 1);
+        transform.localScale = new Vector3(1 * facingDir, 1, 1);
 
         UpdateAnimator();
         
