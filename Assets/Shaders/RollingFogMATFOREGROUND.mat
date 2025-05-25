@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RollingFogMAT
+  m_Name: RollingFogMATFOREGROUND
   m_Shader: {fileID: -6465566751694194690, guid: 85d1dc4daf1157d4eb37956cbc2c97f2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -44,8 +44,8 @@ Material:
     - _FogSize: 0.5
     - _WorldSpace: 1
     m_Colors:
-    - _FogColor: {r: 0.6509434, g: 0.4671695, b: 0.26099145, a: 0.1176471}
-    - _FogSpeed: {r: 2.15, g: 0.0001, b: 0, a: 0}
+    - _FogColor: {r: 0.29036137, g: 0.6704995, b: 0.7075472, a: 0.23921569}
+    - _FogSpeed: {r: 0.68, g: 0.15, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7125518446788954907
