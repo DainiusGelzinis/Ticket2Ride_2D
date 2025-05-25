@@ -6,6 +6,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private float inertiaForce = 0f;
+    [SerializeField] private PlayerController playerController;
+    
+
 
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
@@ -38,7 +42,7 @@ public class PlayerController : MonoBehaviour
         transform.localScale = new Vector3(1 * facingDir, 1, 1);
 
         UpdateAnimator();
-        
+
         if (wallJumpTimer > 0)
             wallJumpTimer -= Time.deltaTime;
 
@@ -83,7 +87,9 @@ public class PlayerController : MonoBehaviour
             // Normal horizontal movement 
             if (wallJumpTimer <= 0)
             {
-                rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
+                // Apply inertia
+                float effectiveXVelocity = (horizontalInput * speed) - inertiaForce;
+                rb.linearVelocity = new Vector2(effectiveXVelocity, rb.linearVelocity.y);
             }
         }
     }
@@ -112,5 +118,10 @@ public class PlayerController : MonoBehaviour
 
         bool isJumping = !IsGrounded();
         //animator.SetBool("isJumping", isJumping);
+    }
+
+    public void SetInertiaForce(float value)
+    {
+        inertiaForce = value;
     }
 }
