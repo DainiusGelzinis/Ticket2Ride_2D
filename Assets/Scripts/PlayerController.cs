@@ -51,12 +51,12 @@ public class PlayerController : MonoBehaviour
             // Wall logic
             if (OnWall() && !IsGrounded())
             {
-                rb.gravityScale = 0;
+                rb.gravityScale = 1f;
                 rb.linearVelocity = new Vector2(0, Mathf.Clamp(rb.linearVelocity.y, -2f, 2f)); // slow sliding on wall
             }
             else
             {
-                rb.gravityScale = 2.5f;
+                rb.gravityScale = 4f;
             }
 
             // Jumping
