@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TrainPause_0: 4732960848117952385
+      TrainPause_1: 9147018772385237596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,8 +8,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private float inertiaForce = 0f;
-    [SerializeField] private PlayerController playerController;
-    
+
+    private bool isDead = false;
+
 
 
     private Rigidbody2D rb;
@@ -31,6 +33,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (isDead)
+            return;
+
         horizontalInput = Input.GetAxis("Horizontal");
 
         // Flip player sprite based on move 
@@ -123,5 +128,36 @@ public class PlayerController : MonoBehaviour
     public void SetInertiaForce(float value)
     {
         inertiaForce = value;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Spike"))
+        {
+            Die();
+        }
+    }
+    
+    private void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+
+    // Optional: trigger a “Death” animation if you have one:
+        if (animator != null)
+            animator.SetTrigger("Death");
+
+    // Freeze the Rigidbody so the player can’t keep moving:
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Static;
+
+    // After a short delay, reload the scene
+        Invoke(nameof(ReloadScene), 1f);
+}
+
+    private void ReloadScene()
+    {
+        Time.timeScale = 1f;  // in case time was paused elsewhere
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
