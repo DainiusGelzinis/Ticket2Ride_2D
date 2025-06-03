@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Scrolling : MonoBehaviour
 {
+    public PlayerController playerController;
     public float Speed;
 
     private float offset;
@@ -17,8 +18,10 @@ public class Scrolling : MonoBehaviour
 
     void Update()
     {
+        float inertia = playerController.GetInertiaForce();
+        float speed = Speed + (-1* inertia * Speed);
 
-        offset += (Time.deltaTime * Speed) / 10;
+        offset += (Time.deltaTime * speed) / 10;
         mat.SetTextureOffset("_MainTex", new Vector2(offset, 0));
     }
 }
