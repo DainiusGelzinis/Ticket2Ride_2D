@@ -137,28 +137,29 @@ public class PlayerController : MonoBehaviour
             Die();
         }
     }
-    
+
     private void Die()
     {
         if (isDead) return;
         isDead = true;
 
-    // Optional: trigger a “Death” animation if you have one:
+        // Optional: trigger a “Death” animation if you have one:
         if (animator != null)
             animator.SetTrigger("Death");
 
-    // Freeze the Rigidbody so the player can’t keep moving:
+        // Freeze the Rigidbody so the player can’t keep moving:
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Static;
 
-    // After a short delay, reload the scene
+        // After a short delay, reload the scene
         Invoke(nameof(ReloadScene), 1f);
-}
+    }
 
     private void ReloadScene()
     {
         Time.timeScale = 1f;  // in case time was paused elsewhere
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     public float GetInertiaForce()
     {
         return inertiaForce;
