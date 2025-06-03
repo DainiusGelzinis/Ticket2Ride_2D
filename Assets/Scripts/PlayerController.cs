@@ -159,6 +159,7 @@ public class PlayerController : MonoBehaviour
     {
         Time.timeScale = 1f;  // in case time was paused elsewhere
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    public float GetInertiaForce()
     {
         return inertiaForce;
     }
