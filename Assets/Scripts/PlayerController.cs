@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
@@ -9,7 +9,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private float inertiaForce = 0f;
 
+    [SerializeField] private Health health;
+
     private bool isDead = false;
+
+    private bool isInvincible = false;    
 
 
 
@@ -132,10 +136,34 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Spike"))
+        if (collision.gameObject.CompareTag("Spike") && !isDead && !isInvincible)
         {
-            Die();
+            
+            health.TakeDamage(1f);
+
+            
+            if (health.currentHealth <= 0f)
+            {
+                Die();
+            }
+            else
+            {
+                
+                StartCoroutine(InvincibilityCoroutine());
+            }
         }
+    }
+
+    private IEnumerator InvincibilityCoroutine()
+    {
+        isInvincible = true;
+
+
+        yield return new WaitForSeconds(1f);
+
+        isInvincible = false;
+
+        
     }
 
     private void Die()
