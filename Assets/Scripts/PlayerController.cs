@@ -127,6 +127,9 @@ public class PlayerController : MonoBehaviour
 
         bool isJumping = !IsGrounded();
         //animator.SetBool("isJumping", isJumping);
+
+        bool Damage = isInvincible;
+        animator.SetBool("Damage", Damage);
     }
 
     public void SetInertiaForce(float value)
