@@ -45,9 +45,9 @@ public class AutoSlider : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         // Determine raw inertia based on slider zones
         float rawInertia;
         
-        if (sliderPositionNormalized < 0.1f)
+        if (sliderPositionNormalized < 0.08f)
             rawInertia = 0f;  // pushed to the far left
-        else if (sliderPositionNormalized < 0.4f && sliderPositionNormalized > 0.1f)
+        else if (sliderPositionNormalized < 0.4f && sliderPositionNormalized > 0.08f)
             rawInertia = 5f;   // pushed to the left
         else if (sliderPositionNormalized >= 0.4f && sliderPositionNormalized <= 0.6f)
             rawInertia = 0f;   // neutral zone
