@@ -9,7 +9,7 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !PlayerController.GameIsDead)
         {
             if (GameIsPaused)
             {
@@ -41,6 +41,12 @@ public class Pause : MonoBehaviour
     {
         Time.timeScale = 1f;  // in case time was paused elsewhere
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;  // in case time was paused elsewhere
+        SceneManager.LoadScene("MainMenu");
     }
     
 }

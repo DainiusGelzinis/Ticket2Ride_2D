@@ -10,12 +10,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float inertiaForce = 0f;
 
     [SerializeField] private Health health;
+    [SerializeField] private GameObject endGameMenuUI;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     private bool isInvincible = false;    
 
-
+    public static bool GameIsDead { get; private set; } = false;
 
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
@@ -173,17 +174,17 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-
-        // Optional: trigger a “Death” animation if you have one:
-        if (animator != null)
-            animator.SetTrigger("Death");
+        GameIsDead = true;
 
         // Freeze the Rigidbody so the player can’t keep moving:
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Static;
+        Time.timeScale = 0f;
 
-        // After a short delay, reload the scene
-        Invoke(nameof(ReloadScene), 1f);
+         // SHOW the EndGameMenu:
+        if (endGameMenuUI != null)
+            endGameMenuUI.SetActive(true);
+
     }
 
     private void ReloadScene()
