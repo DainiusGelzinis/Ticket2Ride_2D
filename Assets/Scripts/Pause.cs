@@ -3,9 +3,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
+    [SerializeField] private AudioClip menuSound;
+
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = menuSound;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -13,10 +22,12 @@ public class Pause : MonoBehaviour
         {
             if (GameIsPaused)
             {
+                audioSource.Play();
                 Resume();
             }
             else
             {
+                audioSource.Play();
                 PauseGame();
             }
 
@@ -26,6 +37,7 @@ public class Pause : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        audioSource.Play();
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -33,6 +45,7 @@ public class Pause : MonoBehaviour
     public void PauseGame()
     {
         pauseMenuUI.SetActive(true);
+        audioSource.Play();
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
@@ -40,12 +53,14 @@ public class Pause : MonoBehaviour
     public void ReloadScene()
     {
         Time.timeScale = 1f;  // in case time was paused elsewhere
+        audioSource.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1f;  // in case time was paused elsewhere
+        audioSource.Play();
         SceneManager.LoadScene("MainMenu");
     }
     

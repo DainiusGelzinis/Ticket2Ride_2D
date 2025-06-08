@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Health health;
     [SerializeField] private GameObject endGameMenuUI;
 
+    [SerializeField] private AudioClip damageSoundClip;
+
     public bool isDead = false;
 
     private bool isInvincible = false;    
@@ -144,6 +146,7 @@ public class PlayerController : MonoBehaviour
         {
             
             health.TakeDamage(1f);
+            SoundFXManager.instance.PlaySoundFXCLip(damageSoundClip, transform, 1f);
 
             
             if (health.currentHealth <= 0f)

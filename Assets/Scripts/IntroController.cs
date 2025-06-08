@@ -7,6 +7,6 @@ public class IntroController : MonoBehaviour
     public void OnIntroFinished()
     {
         mainMenuPanel.SetActive(true);
-        gameObject.SetActive(false); 
+        //gameObject.SetActive(false); 
     }
 }
