@@ -26,6 +26,8 @@ public class SpriteCycler : MonoBehaviour
 
             currentIndex = (currentIndex + 1) % sprites.Length;
             spriteRenderer.sprite = sprites[currentIndex];
+            spriteRenderer.enabled = false;
+            spriteRenderer.enabled = true;
         }
     }
 }
