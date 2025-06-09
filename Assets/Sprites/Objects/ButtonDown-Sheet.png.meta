@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 15e48284a6bff5c46afd7b232a8083ae
+guid: 81106cbc600911d488df09f86f98cacd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5746146898649137715
-    second: LeverOn_0
+      213: 6893179766789583227
+    second: ButtonDown-Sheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LeverOn_0
+      name: ButtonDown-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 808
-        height: 323
+        width: 378
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 332c131f82a6ebf40800000000000000
-      internalID: 5746146898649137715
+      spriteID: 0b19b6a5ad9e46548910d1c91e952021
+      internalID: -1073586797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonDown-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 378
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5461145631d659c4b8c5fd90f675a438
+      internalID: -1440794110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonDown-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 378
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03043e72157cce04f893633842d0fba0
+      internalID: 1709756702
       vertices: []
       indices: 
       edges: []
@@ -125,7 +169,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cc328e01401930a4d975b24cac54b3df
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +178,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ButtonDown-Sheet_0: -1073586797
+      ButtonDown-Sheet_1: -1440794110
+      ButtonDown-Sheet_2: 1709756702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
