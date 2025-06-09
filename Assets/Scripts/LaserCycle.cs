@@ -1,9 +1,10 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class SpriteCycler : MonoBehaviour
 {
     public Sprite[] sprites;
+    public Slider slider;
     private SpriteRenderer spriteRenderer;
     public int currentIndex = 0;
 
@@ -14,20 +15,16 @@ public class SpriteCycler : MonoBehaviour
         if (sprites.Length > 0)
         {
             spriteRenderer.sprite = sprites[currentIndex];
-            StartCoroutine(CycleSprites());
         }
     }
 
-    IEnumerator CycleSprites()
+    void Update()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(5f); // Wait for 5 seconds
 
-            currentIndex = (currentIndex + 1) % sprites.Length;
-            spriteRenderer.sprite = sprites[currentIndex];
-            spriteRenderer.enabled = false;
-            spriteRenderer.enabled = true;
-        }
+        currentIndex = (int)Mathf.Floor(3 / 2f + 3 * slider.value / 10f);
+        spriteRenderer.sprite = sprites[currentIndex];
+        spriteRenderer.enabled = false;
+        spriteRenderer.enabled = true;
+
     }
 }

@@ -12342,6 +12342,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 421f820c376d160458bdcf32af749e40, type: 3}
   - {fileID: 21300000, guid: da45f8ee0b4b11f47bd34761a0da2a73, type: 3}
   - {fileID: 21300000, guid: 9cbd18ffa6ea13d43b2a0ae8554c37da, type: 3}
+  slider: {fileID: 1763394456}
   currentIndex: 0
 --- !u!212 &993227101
 SpriteRenderer:
