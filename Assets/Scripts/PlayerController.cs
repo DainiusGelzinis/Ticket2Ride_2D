@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip damageSoundClip;
 
     public bool isDead = false;
+    public SpriteCycler laserCycle;
 
     private bool isInvincible = false;    
 
@@ -160,6 +161,27 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Laser") && !isDead && !isInvincible && laserCycle.currentIndex==2)
+        {
+            
+            health.TakeDamage(1f);
+            SoundFXManager.instance.PlaySoundFXCLip(damageSoundClip, transform, 1f);
+
+            
+            if (health.currentHealth <= 0f)
+            {
+                Die();
+            }
+            else
+            {
+                
+                StartCoroutine(InvincibilityCoroutine());
+            }
+        }
+    }
 
     private IEnumerator InvincibilityCoroutine()
     {
@@ -170,7 +192,7 @@ public class PlayerController : MonoBehaviour
 
         isInvincible = false;
 
-        
+
     }
 
     private void Die()

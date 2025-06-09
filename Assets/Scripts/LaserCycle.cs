@@ -5,7 +5,7 @@ public class SpriteCycler : MonoBehaviour
 {
     public Sprite[] sprites;
     private SpriteRenderer spriteRenderer;
-    private int currentIndex = 0;
+    public int currentIndex = 0;
 
     void Start()
     {
