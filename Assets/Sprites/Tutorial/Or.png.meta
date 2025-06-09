@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 1a85b126361856145aded3c844188a25
+guid: 0c3ad8e52434bea469788ff7024e0941
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7153792378073661487
-    second: TrainEnd_0
+      213: 220277949849798493
+    second: Or_0
+  - first:
+      213: 6749205797222702711
+    second: Or_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TrainEnd_0
+      name: Or_0
       rect:
         serializedVersion: 2
-        x: 483
-        y: 0
-        width: 1267
-        height: 1800
+        x: 1469
+        y: 809
+        width: 162
+        height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,30 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f204af3f340674360800000000000000
-      internalID: 7153792378073661487
+      spriteID: d5706a8d0a59e0300800000000000000
+      internalID: 220277949849798493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrainEnd_1
+      name: Or_1
       rect:
         serializedVersion: 2
-        x: 1750
-        y: 0
-        width: 1267
-        height: 1800
+        x: 1629
+        y: 809
+        width: 102
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 923198396d3a22249affda17b9d18f87
-      internalID: 1222397549
+      spriteID: 77e577be9eef9ad50800000000000000
+      internalID: 6749205797222702711
       vertices: []
       indices: 
       edges: []
@@ -147,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2bfa28931739dd14da1fa1e0a35d2905
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TrainEnd_0: 7153792378073661487
-      TrainEnd_1: 1222397549
+      Or_0: 220277949849798493
+      Or_1: 6749205797222702711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

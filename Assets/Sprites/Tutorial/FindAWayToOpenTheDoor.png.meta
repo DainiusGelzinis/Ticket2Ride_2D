@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 79b6883ab061de04c80798d825b87ad6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6059051613653819230
+    second: FindAWayToOpenTheDoor_0
+  - first:
+      213: -2943651907465472124
+    second: FindAWayToOpenTheDoor_1
+  - first:
+      213: -7440398441227553351
+    second: FindAWayToOpenTheDoor_2
+  - first:
+      213: -1854889129647306087
+    second: FindAWayToOpenTheDoor_3
+  - first:
+      213: 1332952290483584343
+    second: FindAWayToOpenTheDoor_4
+  - first:
+      213: 7318289747119190508
+    second: FindAWayToOpenTheDoor_5
+  - first:
+      213: -7876106332451060476
+    second: FindAWayToOpenTheDoor_6
+  - first:
+      213: 966637869425079755
+    second: FindAWayToOpenTheDoor_7
+  - first:
+      213: 1973873747069584339
+    second: FindAWayToOpenTheDoor_8
+  - first:
+      213: -1728236956810477864
+    second: FindAWayToOpenTheDoor_9
+  - first:
+      213: -7869620914753222780
+    second: FindAWayToOpenTheDoor_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_0
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1039
+        width: 192
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5fd7932753161450800000000000000
+      internalID: 6059051613653819230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_1
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 1079
+        width: 332
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4879e11bf2c0627d0800000000000000
+      internalID: -2943651907465472124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_2
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 1089
+        width: 132
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5f243e9056eb890800000000000000
+      internalID: -7440398441227553351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_3
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 1019
+        width: 402
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a83a90a2c1246e0800000000000000
+      internalID: -1854889129647306087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_4
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 1089
+        width: 102
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d31d0cb099f7210800000000000000
+      internalID: 1332952290483584343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_5
+      rect:
+        serializedVersion: 2
+        x: 2229
+        y: 1089
+        width: 102
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce13c6440c9cf8560800000000000000
+      internalID: 7318289747119190508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_6
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 759
+        width: 212
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 405cc01250372b290800000000000000
+      internalID: -7876106332451060476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_7
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 819
+        width: 212
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5b58155003a6d00800000000000000
+      internalID: 966637869425079755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_8
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 819
+        width: 102
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d34d8507bb946b10800000000000000
+      internalID: 1973873747069584339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_9
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 819
+        width: 202
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8defb95f4a11408e0800000000000000
+      internalID: -1728236956810477864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FindAWayToOpenTheDoor_10
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 809
+        width: 422
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487462b197d79c290800000000000000
+      internalID: -7869620914753222780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FindAWayToOpenTheDoor_0: 6059051613653819230
+      FindAWayToOpenTheDoor_1: -2943651907465472124
+      FindAWayToOpenTheDoor_10: -7869620914753222780
+      FindAWayToOpenTheDoor_2: -7440398441227553351
+      FindAWayToOpenTheDoor_3: -1854889129647306087
+      FindAWayToOpenTheDoor_4: 1332952290483584343
+      FindAWayToOpenTheDoor_5: 7318289747119190508
+      FindAWayToOpenTheDoor_6: -7876106332451060476
+      FindAWayToOpenTheDoor_7: 966637869425079755
+      FindAWayToOpenTheDoor_8: 1973873747069584339
+      FindAWayToOpenTheDoor_9: -1728236956810477864
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

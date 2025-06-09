@@ -66,7 +66,7 @@ public class Pause : MonoBehaviour
     }
 
     public void MainMenu()
-    {   
+    {
         GameIsPaused = false;
         Time.timeScale = 1f;  // in case time was paused elsewhere
         audioSource.Play();

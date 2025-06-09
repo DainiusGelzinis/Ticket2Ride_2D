@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 1a85b126361856145aded3c844188a25
+guid: 1cf67be167a0a7844a0e0390cbb6848a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7153792378073661487
-    second: TrainEnd_0
+      213: -4707329830740586892
+    second: UseSliderTutorial_0
+  - first:
+      213: -1558435053653230055
+    second: UseSliderTutorial_1
+  - first:
+      213: -4087944078991842767
+    second: UseSliderTutorial_2
+  - first:
+      213: -2120508317783226174
+    second: UseSliderTutorial_3
+  - first:
+      213: -622315346192628631
+    second: UseSliderTutorial_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TrainEnd_0
+      name: UseSliderTutorial_0
       rect:
         serializedVersion: 2
-        x: 483
-        y: 0
-        width: 1267
-        height: 1800
+        x: 39
+        y: 839
+        width: 302
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,30 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f204af3f340674360800000000000000
-      internalID: 7153792378073661487
+      spriteID: 47e8b1e95743caeb0800000000000000
+      internalID: -4707329830740586892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrainEnd_1
+      name: UseSliderTutorial_1
       rect:
         serializedVersion: 2
-        x: 1750
-        y: 0
-        width: 1267
-        height: 1800
+        x: 49
+        y: 729
+        width: 3072
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 923198396d3a22249affda17b9d18f87
-      internalID: 1222397549
+      spriteID: 91e7b7d53935f5ae0800000000000000
+      internalID: -1558435053653230055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UseSliderTutorial_2
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 849
+        width: 202
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132a70ed484b447c0800000000000000
+      internalID: -4087944078991842767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UseSliderTutorial_3
+      rect:
+        serializedVersion: 2
+        x: 2749
+        y: 849
+        width: 302
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8054f7be07292e0800000000000000
+      internalID: -2120508317783226174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UseSliderTutorial_4
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 849
+        width: 112
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9640ae36d771d57f0800000000000000
+      internalID: -622315346192628631
       vertices: []
       indices: 
       edges: []
@@ -147,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2bfa28931739dd14da1fa1e0a35d2905
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TrainEnd_0: 7153792378073661487
-      TrainEnd_1: 1222397549
+      UseSliderTutorial_0: -4707329830740586892
+      UseSliderTutorial_1: -1558435053653230055
+      UseSliderTutorial_2: -4087944078991842767
+      UseSliderTutorial_3: -2120508317783226174
+      UseSliderTutorial_4: -622315346192628631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

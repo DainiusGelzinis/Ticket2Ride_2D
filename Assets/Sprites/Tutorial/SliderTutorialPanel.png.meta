@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1a85b126361856145aded3c844188a25
+guid: 71df9fa5350873c40a42c7ede8b70e40
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7153792378073661487
-    second: TrainEnd_0
+      213: -1792832712214188716
+    second: SliderTutorialPanel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TrainEnd_0
+      name: SliderTutorialPanel_0
       rect:
         serializedVersion: 2
-        x: 483
-        y: 0
-        width: 1267
-        height: 1800
+        x: 189
+        y: 29
+        width: 2992
+        height: 1771
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f204af3f340674360800000000000000
-      internalID: 7153792378073661487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TrainEnd_1
-      rect:
-        serializedVersion: 2
-        x: 1750
-        y: 0
-        width: 1267
-        height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 923198396d3a22249affda17b9d18f87
-      internalID: 1222397549
+      spriteID: 45de5c6a5249e17e0800000000000000
+      internalID: -1792832712214188716
       vertices: []
       indices: 
       edges: []
@@ -147,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2bfa28931739dd14da1fa1e0a35d2905
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TrainEnd_0: 7153792378073661487
-      TrainEnd_1: 1222397549
+      SliderTutorialPanel_0: -1792832712214188716
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
