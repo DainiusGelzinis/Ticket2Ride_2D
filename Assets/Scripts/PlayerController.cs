@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool isDead = false;
     public SpriteCycler laserCycle;
 
-    private bool isInvincible = false;    
+    private bool isInvincible = false;
 
     public static bool GameIsDead { get; set; } = false;
 
@@ -145,39 +145,39 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Spike") && !isDead && !isInvincible)
         {
-            
+
             health.TakeDamage(1f);
             SoundFXManager.instance.PlaySoundFXCLip(damageSoundClip, transform, 1f);
 
-            
+
             if (health.currentHealth <= 0f)
             {
                 Die();
             }
             else
             {
-                
+
                 StartCoroutine(InvincibilityCoroutine());
             }
         }
     }
-    
+
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Laser") && !isDead && !isInvincible && laserCycle.currentIndex==2)
+        if (other.gameObject.CompareTag("Laser") && !isDead && !isInvincible && laserCycle.currentIndex == 2)
         {
-            
+
             health.TakeDamage(1f);
             SoundFXManager.instance.PlaySoundFXCLip(damageSoundClip, transform, 1f);
 
-            
+
             if (health.currentHealth <= 0f)
             {
                 Die();
             }
             else
             {
-                
+
                 StartCoroutine(InvincibilityCoroutine());
             }
         }
@@ -195,6 +195,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
+
     private void Die()
     {
         if (isDead) return;
@@ -206,19 +207,43 @@ public class PlayerController : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Static;
         Time.timeScale = 0f;
 
-         // SHOW the EndGameMenu:
+        // SHOW the EndGameMenu:
         if (endGameMenuUI != null)
             endGameMenuUI.SetActive(true);
 
     }
+
+
 
     private void ReloadScene()
     {
         Time.timeScale = 1f;  // in case time was paused elsewhere
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+
+     public void RespawnAtCheckpoint()
+    {
+        // 1) teleport
+        Vector3 cp = CheckpointManager.Instance.GetCheckpointPosition();
+        transform.position = cp;
+
+        // 2) reset physics
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+
+        // 3) heal
+        health.RestoreFullHealth();
+
+        // 4) allow movement again
+        isDead = false;
+        GameIsDead = false;
+    }
+    
     public float GetInertiaForce()
     {
         return inertiaForce;
     }
+    
+    
 }

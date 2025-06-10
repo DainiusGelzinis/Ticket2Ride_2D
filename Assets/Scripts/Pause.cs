@@ -5,21 +5,23 @@ public class Pause : MonoBehaviour
 {
     [SerializeField] private AudioClip menuSound;
 
+    [SerializeField] private PlayerController playerController;
+
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
     private AudioSource audioSource;
 
     private void Start()
-{
-    // grab your AudioSource as before
-    audioSource = GetComponent<AudioSource>();
-    audioSource.clip = menuSound;
+    {
+        // grab your AudioSource as before
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = menuSound;
 
-    // make sure nothing is paused when this scene begins
-    GameIsPaused = false;
+        // make sure nothing is paused when this scene begins
+        GameIsPaused = false;
 
-}
+    }
     // Update is called once per frame
     void Update()
     {
@@ -56,12 +58,12 @@ public class Pause : MonoBehaviour
     }
 
     public void ReloadScene()
-    {   
+    {
         PlayerController.GameIsDead = false; // reset the game state
         Time.timeScale = 1f;  // in case time was paused elsewhere
         audioSource.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+
     }
 
     public void MainMenu()
@@ -70,7 +72,15 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;  // in case time was paused elsewhere
         audioSource.Play();
         SceneManager.LoadScene("MainMenu");
-        
+
+    }
+    
+    public void RestartFromCheckpoint()
+    {
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        playerController.RespawnAtCheckpoint();
+        pauseMenuUI.SetActive(false);
     }
     
 }

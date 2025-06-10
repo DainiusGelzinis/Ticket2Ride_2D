@@ -28,4 +28,9 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void RestoreFullHealth()
+    {
+        currentHealth = startingHealth;
+    }
+
 }
