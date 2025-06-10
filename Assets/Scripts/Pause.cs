@@ -58,22 +58,33 @@ public class Pause : MonoBehaviour
     }
 
     public void ReloadScene()
-    {
-        PlayerController.GameIsDead = false; // reset the game state
-        Time.timeScale = 1f;  // in case time was paused elsewhere
-        audioSource.Play();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+{
+    // Reset both the “dead” flag and your saved checkpoints:
+    PlayerController.GameIsDead = false;
+    CheckpointManager.Instance.ResetCheckpoints();
 
-    }
+    // Play SFX & unpause:
+    Time.timeScale = 1f;
+    audioSource.Play();
+
+    // Hide the pause UI:
+    pauseMenuUI.SetActive(false);
+
+    // Now reload the scene fresh
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+}
 
     public void MainMenu()
-    {
-        PlayerController.GameIsDead = false; // reset the game state
-        Time.timeScale = 1f;  // in case time was paused elsewhere
-        audioSource.Play();
-        SceneManager.LoadScene("MainMenu");
+{
+    PlayerController.GameIsDead = false;
+    CheckpointManager.Instance.ResetCheckpoints();
 
-    }
+    Time.timeScale = 1f;
+    audioSource.Play();
+    pauseMenuUI.SetActive(false);
+
+    SceneManager.LoadScene("MainMenu");
+}
     
     public void RestartFromCheckpoint()
     {

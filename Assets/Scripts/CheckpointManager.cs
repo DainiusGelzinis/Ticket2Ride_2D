@@ -32,4 +32,10 @@ public class CheckpointManager : MonoBehaviour
     {
         return _checkpointPosition;
     }
+
+    public void ResetCheckpoints()
+    {
+        _highestCheckpointID  = -1;
+        _checkpointPosition = Vector3.zero;
+    }
 }
