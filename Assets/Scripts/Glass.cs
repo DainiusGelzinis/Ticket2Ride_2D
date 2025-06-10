@@ -8,7 +8,7 @@ public class Glass : MonoBehaviour
     private Collider2D platformCollider;  
     private SpriteRenderer spriteRenderer;
 
-    private Animator animator;
+    [SerializeField] private Animator animator;
     //private GameObject glass;
 
     private bool WalkedOn = false;

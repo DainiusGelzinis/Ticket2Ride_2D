@@ -20,8 +20,7 @@ public class SpriteCycler : MonoBehaviour
 
     void Update()
     {
-
-        currentIndex = (int)Mathf.Floor(3 / 2f + 3 * slider.value / 10f);
+        currentIndex = (int)Mathf.Floor(3 / 2f + slider.value / 2f);
         spriteRenderer.sprite = sprites[currentIndex];
         spriteRenderer.enabled = false;
         spriteRenderer.enabled = true;

@@ -10,6 +10,7 @@ public class AutoSlider : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public float autoSpeed = 0.2f;       // How fast the slider auto‐moves (units/sec)
     public float minSliderValue = -5f;
     public float maxSliderValue = 5f;
+    public float iner = 0f;
 
     [Header("References")]
     [SerializeField] private PlayerController playerController;
@@ -58,7 +59,7 @@ public class AutoSlider : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         else
             rawInertia = 0f;   // neutral zone
 
-
+        iner = rawInertia;
         // Smoothly ramp _smoothedInertia toward rawInertia over 2 seconds
         ChangeInertiaSmoothly(rawInertia);
 

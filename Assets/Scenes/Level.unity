@@ -5540,7 +5540,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cedec46ec737ef346989198c44f3dc93, type: 2}
+  - {fileID: 2100000, guid: 6fa825607bff8054687f09a554071d2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21938,6 +21938,7 @@ MonoBehaviour:
   autoSpeed: 0.2
   minSliderValue: -3
   maxSliderValue: 3
+  iner: 0
   playerController: {fileID: 168345293}
 --- !u!114 &1967183112
 MonoBehaviour:
