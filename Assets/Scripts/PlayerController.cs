@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(laserCycle.currentIndex);
         if (isDead)
             return;
 
