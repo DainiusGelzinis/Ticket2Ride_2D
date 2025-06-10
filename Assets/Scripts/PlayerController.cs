@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isInvincible = false;    
 
-    public static bool GameIsDead { get; private set; } = false;
+    public static bool GameIsDead { get; set; } = false;
 
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;

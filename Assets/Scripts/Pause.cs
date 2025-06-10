@@ -19,8 +19,6 @@ public class Pause : MonoBehaviour
     // make sure nothing is paused when this scene begins
     GameIsPaused = false;
 
-    // hide the UI so ESC will actually open it
-    pauseMenuUI.SetActive(false);
 }
     // Update is called once per frame
     void Update()
@@ -59,18 +57,20 @@ public class Pause : MonoBehaviour
 
     public void ReloadScene()
     {   
-        GameIsPaused = false;
+        PlayerController.GameIsDead = false; // reset the game state
         Time.timeScale = 1f;  // in case time was paused elsewhere
         audioSource.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void MainMenu()
     {
-        GameIsPaused = false;
+        PlayerController.GameIsDead = false; // reset the game state
         Time.timeScale = 1f;  // in case time was paused elsewhere
         audioSource.Play();
         SceneManager.LoadScene("MainMenu");
+        
     }
     
 }
