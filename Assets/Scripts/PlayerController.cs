@@ -159,6 +159,9 @@ public class PlayerController : MonoBehaviour
 
                 StartCoroutine(InvincibilityCoroutine());
             }
+        } else if  (collision.gameObject.CompareTag("Floor") && !isDead)
+        {
+            Die();
         }
     }
 
@@ -239,7 +242,7 @@ public class PlayerController : MonoBehaviour
         isDead = false;
         GameIsDead = false;
     }
-    
+
     public float GetInertiaForce()
     {
         return inertiaForce;
