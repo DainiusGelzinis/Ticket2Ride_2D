@@ -13,6 +13,6 @@ public class BoxController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.linearVelocity = new Vector2 (-slide.iner, 0);
+        rb.linearVelocity = new Vector2 (-slide.iner, rb.linearVelocity.y);
     }
 }
