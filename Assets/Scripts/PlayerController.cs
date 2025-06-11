@@ -229,6 +229,7 @@ public class PlayerController : MonoBehaviour
     {
         // 1) teleport
         Vector3 cp = CheckpointManager.Instance.GetCheckpointPosition();
+        CheckpointManager.Instance.ResetSceneObjects();
         transform.position = cp;
 
         // 2) reset physics
