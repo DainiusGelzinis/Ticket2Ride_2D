@@ -47,38 +47,46 @@ public class CheckpointManager : MonoBehaviour
     }
 
     public void ResetSceneObjects()
+{
+    for (int i = 0; i < objectsToReset.Count; i++)
     {
-        for (int i = 0; i < objectsToReset.Count; i++)
+        GameObject obj = objectsToReset[i];
+
+        // Skip if the object is destroyed (null)
+        if (obj == null)
         {
-            GameObject obj = objectsToReset[i];
-            if (obj == null) continue;
-
-            Vector3 originalPos = originalPositions[i];
-
-            // Reset position and rotation
-            obj.transform.position = originalPos;
-            obj.transform.rotation = Quaternion.identity;
-
-            // Reset physics
-            if (obj.TryGetComponent(out Rigidbody2D rb))
-            {
-                rb.linearVelocity = Vector2.zero;
-                rb.angularVelocity = 0f;
-                rb.bodyType = RigidbodyType2D.Dynamic;
-            }
+            Debug.LogWarning($"Object at index {i} is missing (destroyed?) and will be skipped.");
+            continue; // Skip destroyed objects
         }
 
-        if (Door.TryGetComponent<Animator>(out Animator animatorDoor))
-        {
-            animatorDoor.SetTrigger("Close");
-        }
+        Vector3 originalPos = originalPositions[i];
 
-        if (Lever.TryGetComponent<Animator>(out Animator animatorLever))
-        {
-            animatorLever.SetBool("isActive", false);
-        }
+        // Reset position and rotation to the initial state
+        obj.transform.position = originalPos;
+        obj.transform.rotation = Quaternion.identity;
 
+        // Reset physics
+        if (obj.TryGetComponent(out Rigidbody2D rb))
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.bodyType = RigidbodyType2D.Dynamic;
+        }
     }
+
+    // Reset the Door animation (if any)
+    if (Door != null && Door.TryGetComponent<Animator>(out Animator animatorDoor))
+    {
+        animatorDoor.SetTrigger("Close");
+    }
+
+    // Reset the Lever animation (if any)
+    if (Lever != null && Lever.TryGetComponent<Animator>(out Animator animatorLever))
+    {
+        animatorLever.SetBool("isActive", false);
+    }
+}
+
 
     public void ResetCheckpoints()
     {
