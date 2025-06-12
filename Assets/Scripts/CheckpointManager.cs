@@ -80,10 +80,11 @@ public class CheckpointManager : MonoBehaviour
         animatorDoor.SetTrigger("Close");
     }
 
-    // Reset the Lever animation (if any)
-    if (Lever != null && Lever.TryGetComponent<Animator>(out Animator animatorLever))
-    {
-        animatorLever.SetBool("isActive", false);
+        // Reset the Lever animation (if any)
+        if (Lever != null && Lever.TryGetComponent<Animator>(out Animator animatorLever))
+        {
+            animatorLever.SetBool("isActive", false);
+            Debug.Log("Succes: " + animatorLever);
     }
 }
 
