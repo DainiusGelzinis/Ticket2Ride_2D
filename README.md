@@ -39,12 +39,8 @@ Use `File > Build Settings` in the Unity editor to create a standalone build for
 ![Class Diagram](class_diagram.png)
 
 ## Demo
-Below is a short gameplay demo. Click play to watch:
+See the full demo on [GitHub Pages](https://dainiusgelzinis.github.io/Ticket2Ride_2D/).
 
-<video src="demo.mp4" controls width="640">
-  Your browser does not support the <code>video</code> tag. You can
-  <a href="demo.mp4">download the video here</a> instead.
-</video>
 
 ## Credits
 Art assets under `Assets/BayatGames` and fonts under `Assets/FreeButtonSet` come from free asset packs. The project currently has no explicit license file.
