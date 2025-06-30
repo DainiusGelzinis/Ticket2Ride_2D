@@ -41,6 +41,3 @@ Use `File > Build Settings` in the Unity editor to create a standalone build for
 ## Demo
 See the full demo on [GitHub Pages](https://dainiusgelzinis.github.io/Ticket2Ride_2D/).
 
-
-## Credits
-Art assets under `Assets/BayatGames` and fonts under `Assets/FreeButtonSet` come from free asset packs. The project currently has no explicit license file.
